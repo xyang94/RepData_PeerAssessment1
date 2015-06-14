@@ -48,6 +48,19 @@ plot(timeSeries[,1],timeSeries[,2], xlab="interval", ylab="average steps across 
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
+```r
+Max=max(timeSeries[,2])
+for (i in 1:length(timeSeries[,1]))
+ {
+  if (timeSeries[i,2] == Max)
+   { print(timeSeries[i,1]) }
+  }
+```
+
+```
+## [1] 835
+```
+
 
 ## Imputing missing values
 

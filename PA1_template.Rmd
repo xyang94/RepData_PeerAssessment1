@@ -30,6 +30,12 @@ median(totalStepsPerDay[,2],na.rm=TRUE)
 # calculate the mean for the 5-minute interval and plot vs time series
 timeSeries=aggregate(activity$steps, by=list(activity$interval), mean, na.rm=TRUE)
 plot(timeSeries[,1],timeSeries[,2], xlab="interval", ylab="average steps across days", main="daily activity pattern")
+Max=max(timeSeries[,2])
+for (i in 1:length(timeSeries[,1]))
+ {
+  if (timeSeries[i,2] == Max)
+   { print(timeSeries[i,1]) }
+  }
 ```
 
 
